@@ -40,7 +40,9 @@ for itemDeclaration in definition.items:
             continue
         print("cell-name: ", instance.module, "instance-name: ", instance.name)
         for hook in instance.portlist:
-            print("portname: ", hook.portname, "argname: ", hook.portname)
+            if hook.portname == "D":
+                print("change to clk input which is __clockgate_output_gclk_")
+        print("portname: ", hook.portname, "argname: ", hook.portname)
     newrtl.append(itemDeclaration)
 
 
