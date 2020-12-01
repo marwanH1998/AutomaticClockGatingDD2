@@ -1,5 +1,3 @@
-
-
 module test
 (
   D_IN,
@@ -22,8 +20,6 @@ module test
     .GATE(EN),
     .CLK(CLK)
   );
-
-
   sky130_fd_sc_hd__dfxtp_1
   _2_
   (
