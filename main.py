@@ -23,7 +23,7 @@ definition = desc.definitions[0]
 #             print("portname: ", hook.portname, "argname: ", hook.portname)
 
 instances = []
-
+clockgate_output_gclk = vast.Wire('__clockgate_output_gclk_')
 clkgateArgs = [
  vast.PortArg("GCLK", vast.Identifier("__clockgate_output_gclk_")),
  vast.PortArg("GATE", vast.Identifier("EN")),
@@ -38,12 +38,14 @@ clkgate_cell = vast.Instance(
 )
 
 instances.append(vast.InstanceList("sky130_fd_sc_hd__dlclkp", tuple(), tuple([clkgate_cell])))
+instances.append(clockgate_output_gclk)
 items = list(definition.items)
 for itemlist in items:
     item_type = type(itemlist).__name__
     if item_type == "InstanceList":
         if itemlist.instances[0].module == "sky130_fd_sc_hd__mux2_1":
-            instances.remove(vast.InstanceList("sky130_fd_sc_hd__mux2_1", tuple(), tuple(itemlist.instances[0].name)))
+            #instances.remove(vast.InstanceList("sky130_fd_sc_hd__mux2_1", tuple(), tuple(itemlist.instances[0].name)))
+            print("Remove")
 items = items + instances
 definition.items = tuple(items)
 codegen = ASTCodeGenerator()

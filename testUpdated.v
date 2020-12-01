@@ -37,10 +37,11 @@ module test
   __clockgate_cell__
   (
     .GCLK(__clockgate_output_gclk_),
-    .GATE(__clockgate_input_gate_),
-    .CLK(__clockgate_input_clk_)
+    .GATE(EN),
+    .CLK(CLK)
   );
 
+  wire __clockgate_output_gclk_;
 
 endmodule
 
