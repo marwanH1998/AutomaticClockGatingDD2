@@ -26,8 +26,8 @@ instances = []
 
 clkgateArgs = [
  vast.PortArg("GCLK", vast.Identifier("__clockgate_output_gclk_")),
- vast.PortArg("GATE", vast.Identifier("__clockgate_input_gate_")),
- vast.PortArg("CLK", vast.Identifier("__clockgate_input_clk_"))
+ vast.PortArg("GATE", vast.Identifier("EN")),
+ vast.PortArg("CLK", vast.Identifier("CLK"))
 ]
 
 clkgate_cell = vast.Instance(
@@ -43,7 +43,7 @@ for itemlist in items:
     item_type = type(itemlist).__name__
     if item_type == "InstanceList":
         if itemlist.instances[0].module == "sky130_fd_sc_hd__mux2_1":
-            print("remove from list")
+            instances.remove(vast.InstanceList("sky130_fd_sc_hd__mux2_1", tuple(), tuple(itemlist.instances[0].name)))
 items = items + instances
 definition.items = tuple(items)
 codegen = ASTCodeGenerator()
