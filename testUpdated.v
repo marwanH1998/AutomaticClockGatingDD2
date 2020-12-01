@@ -28,7 +28,7 @@ module test
   _2_
   (
     .CLK(CLK),
-    .D(_0_),
+    .D(__clockgate_output_gclk_),
     .Q(D_OUT)
   );
 

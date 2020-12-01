@@ -41,7 +41,8 @@ for itemDeclaration in definition.items:
         print("cell-name: ", instance.module, "instance-name: ", instance.name)
         for hook in instance.portlist:
             if hook.portname == "D":
-                print("change to clk input which is __clockgate_output_gclk_")
+                print("change to clk input which is __clockgate_output_gclk_",hook.argname)
+                hook.argname=vast.Identifier('__clockgate_output_gclk_')
         print("portname: ", hook.portname, "argname: ", hook.portname)
     newrtl.append(itemDeclaration)
 
