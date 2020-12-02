@@ -41,7 +41,8 @@ To run our program :  1- Clone the repository into your machine.<br />
                              python3 --version to get your current version<br />
                       3-make sure you have pyverilog installed by running this command<br />
                              pip3 install pyverilog <br />
-                      4-open main.py and change test.v to your required verilog file "can be changed later as a user input or an argument"<br />
+                      4-open main.py and change test.v to your required verilog file "can be changed
+                      later as a user input or an argument"<br />
                       5- open a terminal in the cloned directory and run the script by<br />
                               python3 main.py<br />
                       6-a file called testUpdated.v will appear in your directory this is the enhanced version of the gl. 
