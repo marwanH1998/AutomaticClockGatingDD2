@@ -1,10 +1,12 @@
 
+<img width="468" alt="pic2" src="https://user-images.githubusercontent.com/60003290/100896572-6d310f00-34c7-11eb-960c-9ff59812e98d.png">
 CSCE3304-Digital Design II
 
 Project II
 
 Automatic Clock Gating 
-![alt text](https://imgur.com/a/Mctu21I)
+<img width="406" alt="Picture1" src="https://user-images.githubusercontent.com/60003290/100896517-5ee2f300-34c7-11eb-9fe4-9dac5985eda4.png">
+
 
 **Fall 2020**
 
