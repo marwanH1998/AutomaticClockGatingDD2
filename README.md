@@ -50,7 +50,7 @@ To run our program :  1- Clone the repository into your machine.<br />
 proceeding with the project:
 
                       1- We will find out a see the output of the testbench "using alternative
-                      for gtk-wavee for example"
+                      for gtk-wave for example"
                       2-analyzing the power consumption for each of the test cells.
 Libraries used:
                       1-sky130_fd_sc_hd_dfxtp.v 
@@ -58,7 +58,8 @@ Libraries used:
                       3-sky130_fd_sc_hd_udp_dff_p_pp_pg_n.v
                       4-the cells.v file has the following libraries:  
                              sky130_fd_sc_hd_dfxtp_1 and sky130_fd_sc_hd_dlclkp got this modules
-                      from sky130_fd_sc_hd.v.
+                      from sky130_fd_sc_hd.v. This can be foundinside 
+                      /pdks/sky130A/libs.ref/sky130_fd_sc_hd
                              
  </div>
                     
