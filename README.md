@@ -22,4 +22,19 @@ Automatic Clock Gating <br />
 We started by learning. More about Pyverilog and about its data structure and how to add, remove, adjust cells. After reading the documentation of pyverilog, We were able to start coding by reading the Verilog file and parsing the required cells and adjusting it till we reached the output of out program which is TestUpdated.v
 
 TestUpdated.v replaced the multiplexer with the clock gate and adjust all the required wire supporting the sky130A pdk which enhances the power consumption of the circuit.
+
+We started by generating the gl which we did in the last milestone, now we did it on multiple bits, and then we made our python program.  We made a test bench but it seems like there’s a problem with gtkwave as it does not show any signals.
+
+We added the spm.v and the spm_gl.v and we tried to test it using our utlity program the thing is that the spm_gl does not have the problem of the bank of flipflops that's why it does zero changes to our utility program.
+
+
+To run our program : 1- Clone the repository into your machine.
+                     2-make sure you have python3.9 installed by running command 
+                            python3 --version to get your current version
+                     3-make sure you have pyverilog installed by running this command
+                            pip3 install pyverilog 
+                     4-open main.py and change test.v to your required verilog file "can be changed later as a user input or an argument"
+                     5- open a terminal in the cloned directory and run the script by
+                             python3 main.py
+                     6-a file called testUpdated.v will appear in your directory this is the enhanced version of the gl. "currently supporting sky130A only"
 </p>
