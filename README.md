@@ -4,6 +4,8 @@ CSCE3304-Digital Design II
 Project II
 
 Automatic Clock Gating 
+![alt text](https://imgur.com/a/Mctu21I)
+
 **Fall 2020**
 
 **Mariam Farghaly- 900170254**
