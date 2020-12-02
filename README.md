@@ -24,8 +24,8 @@ add, remove, adjust cells. after reading the documentation of pyverilog, We were
 to start coding by reading the Verilog file and parsing the required cells and adjusting
 it till we reached the output of out program which is TestUpdated.v
 
-TestUpdated.v replaced the multiplexer with the clock gate and adjust all the required wire supporting the 
-sky130A pdk which enhances the power consumption of the circuit.
+TestUpdated.v replaced the multiplexer with the clock gate and adjust all the required 
+wire supporting the sky130A pdk which enhances the power consumption of the circuit.
 
 We started by generating the gl which we did in the last milestone, now we did it on multiple bits, 
 and then we made our python program.  We made a test bench but it seems like there’s a problem with 
@@ -34,7 +34,7 @@ gtkwave as it does not show any signals.
 We added the spm.v and the spm_gl.v and we tried to test it using our utlity program the thing is 
 that the spm_gl does not have the problem of the bank of flipflops that's why it does zero changes 
 to our utility program.
-
+<div style="text-align: right"> 
 
 To run our program :  1- Clone the repository into your machine.<br />
                       2-make sure you have python3.9 installed by running command <br />
@@ -50,6 +50,7 @@ proceeding with the project:
 
                       1- We will find out a see the output of the testbench "using alternative for gtk-wavee for example"
                       2-analyzing the power consumption for each of the test cells.
+ </div>
                     
 </p>
 </pre>
