@@ -60,6 +60,7 @@ Libraries used:
                              sky130_fd_sc_hd_dfxtp_1 and sky130_fd_sc_hd_dlclkp got this modules
                       from sky130_fd_sc_hd.v. This can be found inside 
                       /pdks/sky130A/libs.ref/sky130_fd_sc_hd
+extra command to run the output and testbench can be found in read.txt
                              
  </div>
                     
