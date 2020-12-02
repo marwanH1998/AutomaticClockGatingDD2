@@ -41,18 +41,19 @@ To run our program :  1- Clone the repository into your machine.<br />
                              python3 --version to get your current version<br />
                       3-make sure you have pyverilog installed by running this command<br />
                              pip3 install pyverilog <br />
-                      4-open main.py and change test.v to your required verilog file "can be changed
-                      later as a user input or an argument"<br />
+                      4-open main.py and change test.v to your required verilog file "can 
+                      be changed later as a user input or an argument"<br />
                       5- open a terminal in the cloned directory and run the script by<br />
                               python3 main.py<br />
-                      6-a file called testUpdated.v will appear in your directory this is the enhanced version of the gl. 
-                      "currently supporting sky130A only"<br />
+                      6-a file called testUpdated.v will appear in your directory this 
+                      is the enhanced version of the gl. "currently supporting sky130A only"<br />
 proceeding with the project:
 
-                      1- We will find out a see the output of the testbench "using alternative for gtk-wavee for example"
+                      1- We will find out a see the output of the testbench "using alternative
+                      for gtk-wavee for example"
                       2-analyzing the power consumption for each of the test cells.
 Libraries used:
-                      1-ky130_fd_sc_hd_dfxtp.v 
+                      1-sky130_fd_sc_hd_dfxtp.v 
                       2-sky130_fd_sc_hddfxtp.behavioral.v 
                       3-sky130_fd_sc_hd_udp_dff_p_pp_pg_n.v
  </div>
