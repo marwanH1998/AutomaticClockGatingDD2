@@ -3,7 +3,7 @@ from pyverilog.vparser.parser import parse
 from pyverilog.ast_code_generator.codegen import ASTCodeGenerator
 
 
-rtl = "test_2.v"
+rtl = "test.v"
 ast,_ = parse([rtl])
 # get the root node of the tree (Description)
 desc = ast.description
