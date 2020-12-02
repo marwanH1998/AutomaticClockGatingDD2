@@ -3,7 +3,7 @@ from pyverilog.vparser.parser import parse
 from pyverilog.ast_code_generator.codegen import ASTCodeGenerator
 
 
-rtl = "test.v"
+rtl = "test_2.v"
 ast,_ = parse([rtl])
 # get the root node of the tree (Description)
 desc = ast.description
@@ -14,6 +14,8 @@ definition = desc.definitions[0]
 # print the cell ports and their corresponding arguments
 
 newrtl= []
+inputlist = []
+outputlist= [] 
 clkgateArgs = [
  vast.PortArg("GCLK", vast.Identifier("__clockgate_output_gclk_")),
  vast.PortArg("GATE", vast.Identifier("EN")),
@@ -29,7 +31,7 @@ clkgate_cell = vast.Instance(
 clockgate_output_gclk = vast.Wire('__clockgate_output_gclk_')
 
 
-
+k=0
 newrtl.append(clockgate_output_gclk)
 for itemDeclaration in definition.items:
     item_type = type(itemDeclaration).__name__
@@ -37,12 +39,22 @@ for itemDeclaration in definition.items:
         instance = itemDeclaration.instances[0]
         if(instance.module == "sky130_fd_sc_hd__mux2_1"):
             newrtl.append(vast.InstanceList("sky130_fd_sc_hd__dlclkp", tuple(), tuple([clkgate_cell])))
+            for hook in instance.portlist:
+                if hook.portname == "A1": #input
+                    inputlist.append(hook.argname)
+                if hook.portname == "A0": #output
+                    outputlist.append(hook.argname)
             continue
         print("cell-name: ", instance.module, "instance-name: ", instance.name)
         for hook in instance.portlist:
-            if hook.portname == "D":
+            if hook.portname == "CLK":
                 print("change to clk input which is __clockgate_output_gclk_",hook.argname)
                 hook.argname=vast.Identifier('__clockgate_output_gclk_')
+            if hook.portname == "D":
+                    hook.argname=inputlist[k]
+            if hook.portname == "Q":
+                    hook.argname=outputlist[k]
+        k = k + 1
         print("portname: ", hook.portname, "argname: ", hook.portname)
     newrtl.append(itemDeclaration)
 
