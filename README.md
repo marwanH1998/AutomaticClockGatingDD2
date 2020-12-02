@@ -51,6 +51,10 @@ proceeding with the project:
 
                       1- We will find out a see the output of the testbench "using alternative for gtk-wavee for example"
                       2-analyzing the power consumption for each of the test cells.
+Libraries used:
+                      1-ky130_fd_sc_hd_dfxtp.v 
+                      2-sky130_fd_sc_hddfxtp.behavioral.v 
+                      3-sky130_fd_sc_hd_udp_dff_p_pp_pg_n.v
  </div>
                     
 </p>
