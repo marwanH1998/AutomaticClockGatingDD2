@@ -56,6 +56,10 @@ Libraries used:
                       1-sky130_fd_sc_hd_dfxtp.v 
                       2-sky130_fd_sc_hddfxtp.behavioral.v 
                       3-sky130_fd_sc_hd_udp_dff_p_pp_pg_n.v
+                      4-the cells.v file has the following libraries:  
+                             sky130_fd_sc_hd_dfxtp_1 and sky130_fd_sc_hd_dlclkp got this modules
+                      from sky130_fd_sc_hd.v.
+                             
  </div>
                     
 </p>
