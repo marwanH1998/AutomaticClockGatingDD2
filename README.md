@@ -58,7 +58,7 @@ Libraries used:
                       3-sky130_fd_sc_hd_udp_dff_p_pp_pg_n.v
                       4-the cells.v file has the following libraries:  
                              sky130_fd_sc_hd_dfxtp_1 and sky130_fd_sc_hd_dlclkp got this modules
-                      from sky130_fd_sc_hd.v. This can be foundinside 
+                      from sky130_fd_sc_hd.v. This can be found inside 
                       /pdks/sky130A/libs.ref/sky130_fd_sc_hd
                              
  </div>
