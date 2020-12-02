@@ -28,13 +28,13 @@ We started by generating the gl which we did in the last milestone, now we did i
 We added the spm.v and the spm_gl.v and we tried to test it using our utlity program the thing is that the spm_gl does not have the problem of the bank of flipflops that's why it does zero changes to our utility program.
 
 
-To run our program : 1- Clone the repository into your machine.
-                     2-make sure you have python3.9 installed by running command 
-                            python3 --version to get your current version
-                     3-make sure you have pyverilog installed by running this command
-                            pip3 install pyverilog 
-                     4-open main.py and change test.v to your required verilog file "can be changed later as a user input or an argument"
-                     5- open a terminal in the cloned directory and run the script by
-                             python3 main.py
-                     6-a file called testUpdated.v will appear in your directory this is the enhanced version of the gl. "currently supporting sky130A only"
+To run our program :  1- Clone the repository into your machine.<br />
+                      2-make sure you have python3.9 installed by running command <br />
+                             python3 --version to get your current version<br />
+                      3-make sure you have pyverilog installed by running this command<br />
+                             pip3 install pyverilog 
+                      4-open main.py and change test.v to your required verilog file "can be changed later as a user input or an argument"<br />
+                      5- open a terminal in the cloned directory and run the script by<br />
+                              python3 main.py<br />
+                      6-a file called testUpdated.v will appear in your directory this is the enhanced version of the gl. "currently supporting sky130A only"<br />
 </p>
