@@ -1,6 +1,6 @@
 
 
-module test
+module testUpdated
 (
   D_IN,
   CLK,
