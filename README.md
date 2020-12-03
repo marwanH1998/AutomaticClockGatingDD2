@@ -49,6 +49,9 @@ To run our program :  1- Clone the repository into your machine.<br />
                       7- We found out the output of the testbench file(tb.v) using gtk-wave.
 proceeding with the project:
                       Analyzing the power consumption for each of the test cells.
+                      
+Languages were are using: Verilog and Python
+
 Libraries used:
                       1-sky130_fd_sc_hd.v 
                       2-primitives.v
