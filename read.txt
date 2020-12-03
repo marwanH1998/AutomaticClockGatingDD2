@@ -1,4 +1,9 @@
-Commands (From RTL to Gate-level Netlist)
+///Commands to Run testbench
+iverilog -o test.vvp testUpdated.v tb.v
+vvp test.vvp
+
+
+///Commands (From RTL to Gate-level Netlist)
 The following are the steps of how we reached to the gate-level netlist using the following commands:
 
 # read design
@@ -15,4 +20,3 @@ clean
 write_verilog -noattr -noexpr test32bit.gl.v
 #exit yosys shell
 exit
-
