@@ -56,8 +56,8 @@ Libraries used:
                       /pdks/sky130A/libs.ref/sky130_fd_sc_hd
                       
 extra command to run the output,testbench,how did we reach the gatelevel netlist can be found in read.txt
-[WhatsApp Image 2020-12-03 at 2 06 50 PM](https://user-images.githubusercontent.com/60003290/101016244-2dbefd00-3571-11eb-9853-3d0c289ceda4.jpeg)
-[WhatsApp Image 2020-12-03 at 2 12 15 PM](https://user-images.githubusercontent.com/60003290/101016874-07e62800-3572-11eb-989d-a5bd6ec449c1.jpeg)
+<img src="https://user-images.githubusercontent.com/60003290/101016244-2dbefd00-3571-11eb-9853-3d0c289ceda4.jpeg">
+<img src="https://user-images.githubusercontent.com/60003290/101016874-07e62800-3572-11eb-989d-a5bd6ec449c1.jpeg">
 
  </div>
                     
