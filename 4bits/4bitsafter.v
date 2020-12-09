@@ -24,33 +24,6 @@ module test4bit
   );
 
 
-  sky130_fd_sc_hd__dlclkp
-  __clockgate_cell__
-  (
-    .GCLK(__clockgate_output_gclk_),
-    .GATE(EN),
-    .CLK(CLK)
-  );
-
-
-  sky130_fd_sc_hd__dlclkp
-  __clockgate_cell__
-  (
-    .GCLK(__clockgate_output_gclk_),
-    .GATE(EN),
-    .CLK(CLK)
-  );
-
-
-  sky130_fd_sc_hd__dlclkp
-  __clockgate_cell__
-  (
-    .GCLK(__clockgate_output_gclk_),
-    .GATE(EN),
-    .CLK(CLK)
-  );
-
-
   sky130_fd_sc_hd__dfxtp_1
   _5_
   (
