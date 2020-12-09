@@ -32,13 +32,16 @@ clockgate_output_gclk = vast.Wire('__clockgate_output_gclk_')
 
 
 k=0
+insertedbefore=0;
 newrtl.append(clockgate_output_gclk)
 for itemDeclaration in definition.items:
     item_type = type(itemDeclaration).__name__
     if item_type == "InstanceList":
         instance = itemDeclaration.instances[0]
         if(instance.module == "sky130_fd_sc_hd__mux2_1"):
-            newrtl.append(vast.InstanceList("sky130_fd_sc_hd__dlclkp", tuple(), tuple([clkgate_cell])))
+            if insertedbefore ==0:
+                newrtl.append(vast.InstanceList("sky130_fd_sc_hd__dlclkp", tuple(), tuple([clkgate_cell])))
+                insertedbefore=1
             for hook in instance.portlist:
                 if hook.portname == "A1": #input
                     inputlist.append(hook.argname)
