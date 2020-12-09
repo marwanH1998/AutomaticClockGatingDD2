@@ -1,5 +1,5 @@
 $date
-	Wed Dec  9 19:05:07 2020
+	Wed Dec  9 18:58:57 2020
 $end
 $version
 	Icarus Verilog
@@ -7868,17 +7868,17 @@ $var wire 1 ~N xor0_out_X $end
 $upscope $end
 $upscope $end
 $scope module tb $end
-$var wire 8 !O D_OUT [7:0] $end
+$var wire 4 !O D_OUT [3:0] $end
 $var reg 1 "O CLK $end
-$var reg 8 #O D_IN [7:0] $end
+$var reg 4 #O D_IN [3:0] $end
 $var reg 1 $O EN $end
 $scope module x $end
 $var wire 1 "O CLK $end
-$var wire 8 %O D_IN [7:0] $end
+$var wire 4 %O D_IN [3:0] $end
 $var wire 1 $O EN $end
 $var wire 1 &O __clockgate_output_gclk_ $end
-$var wire 8 'O D_OUT [7:0] $end
-$scope module _09_ $end
+$var wire 4 'O D_OUT [3:0] $end
+$scope module _5_ $end
 $var wire 1 (O D $end
 $var wire 1 )O VGND $end
 $var wire 1 *O VNB $end
@@ -7893,7 +7893,7 @@ $var wire 1 .O buf_Q $end
 $var wire 1 &O CLK $end
 $upscope $end
 $upscope $end
-$scope module _10_ $end
+$scope module _6_ $end
 $var wire 1 /O D $end
 $var wire 1 0O VGND $end
 $var wire 1 1O VNB $end
@@ -7908,7 +7908,7 @@ $var wire 1 5O buf_Q $end
 $var wire 1 &O CLK $end
 $upscope $end
 $upscope $end
-$scope module _11_ $end
+$scope module _7_ $end
 $var wire 1 6O D $end
 $var wire 1 7O VGND $end
 $var wire 1 8O VNB $end
@@ -7923,7 +7923,7 @@ $var wire 1 <O buf_Q $end
 $var wire 1 &O CLK $end
 $upscope $end
 $upscope $end
-$scope module _12_ $end
+$scope module _8_ $end
 $var wire 1 =O D $end
 $var wire 1 >O VGND $end
 $var wire 1 ?O VNB $end
@@ -7938,122 +7938,34 @@ $var wire 1 CO buf_Q $end
 $var wire 1 &O CLK $end
 $upscope $end
 $upscope $end
-$scope module _13_ $end
-$var wire 1 DO D $end
-$var wire 1 EO VGND $end
-$var wire 1 FO VNB $end
-$var wire 1 GO VPB $end
-$var wire 1 HO VPWR $end
-$var wire 1 IO Q $end
-$var wire 1 &O CLK $end
-$scope module base $end
-$var wire 1 DO D $end
-$var wire 1 IO Q $end
-$var wire 1 JO buf_Q $end
-$var wire 1 &O CLK $end
-$upscope $end
-$upscope $end
-$scope module _14_ $end
-$var wire 1 KO D $end
-$var wire 1 LO VGND $end
-$var wire 1 MO VNB $end
-$var wire 1 NO VPB $end
-$var wire 1 OO VPWR $end
-$var wire 1 PO Q $end
-$var wire 1 &O CLK $end
-$scope module base $end
-$var wire 1 KO D $end
-$var wire 1 PO Q $end
-$var wire 1 QO buf_Q $end
-$var wire 1 &O CLK $end
-$upscope $end
-$upscope $end
-$scope module _15_ $end
-$var wire 1 RO D $end
-$var wire 1 SO VGND $end
-$var wire 1 TO VNB $end
-$var wire 1 UO VPB $end
-$var wire 1 VO VPWR $end
-$var wire 1 WO Q $end
-$var wire 1 &O CLK $end
-$scope module base $end
-$var wire 1 RO D $end
-$var wire 1 WO Q $end
-$var wire 1 XO buf_Q $end
-$var wire 1 &O CLK $end
-$upscope $end
-$upscope $end
-$scope module _16_ $end
-$var wire 1 YO D $end
-$var wire 1 ZO VGND $end
-$var wire 1 [O VNB $end
-$var wire 1 \O VPB $end
-$var wire 1 ]O VPWR $end
-$var wire 1 ^O Q $end
-$var wire 1 &O CLK $end
-$scope module base $end
-$var wire 1 YO D $end
-$var wire 1 ^O Q $end
-$var wire 1 _O buf_Q $end
-$var wire 1 &O CLK $end
-$upscope $end
-$upscope $end
 $scope module __clockgate_cell__ $end
 $var wire 1 "O CLK $end
 $var wire 1 $O GATE $end
 $var wire 1 &O GCLK $end
-$var wire 1 `O clkn $end
-$var wire 1 aO m0 $end
+$var wire 1 DO clkn $end
+$var wire 1 EO m0 $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-1aO
-1`O
-x_O
-x^O
-1]O
-1\O
-0[O
-0ZO
-0YO
-xXO
-xWO
-1VO
-1UO
-0TO
-0SO
-0RO
-xQO
-xPO
-1OO
-1NO
-0MO
-0LO
-0KO
-xJO
-xIO
-1HO
-1GO
-0FO
-0EO
-0DO
+1EO
+1DO
 xCO
 xBO
 1AO
 1@O
 0?O
 0>O
-0=O
+1=O
 x<O
 x;O
 1:O
 19O
 08O
 07O
-16O
+06O
 x5O
 x4O
 13O
@@ -12401,212 +12313,152 @@ z"
 z!
 $end
 #5000
-0`O
+0DO
 1&O
 1"O
 #6000
-0^O
-0WO
-0PO
-0IO
-0BO
-1;O
+1BO
+0;O
 04O
 b1 !O
 b1 'O
 0-O
-0_O
-0XO
-0QO
-0JO
-0CO
-1<O
+1CO
+0<O
 05O
 0.O
 #10000
-1`O
+1DO
 0&O
 0"O
 #15000
-0`O
+0DO
 1&O
 1"O
 #20000
-0aO
-1`O
+0EO
+1DO
 0&O
-06O
+0=O
 0"O
 0$O
 b0 #O
 b0 %O
 #25000
-0`O
+0DO
 1"O
 #30000
-1`O
+1DO
 0"O
 #35000
-0`O
+0DO
 1"O
 #40000
-1`O
-16O
+1DO
+1=O
 0"O
 b1 #O
 b1 %O
 #45000
-0`O
+0DO
 1"O
 #50000
-1`O
+1DO
 0"O
 #55000
-0`O
+0DO
 1"O
 #60000
-1aO
-1`O
-06O
+1EO
+1DO
+0=O
 0"O
 1$O
 b0 #O
 b0 %O
 #65000
-0`O
+0DO
 1&O
 1"O
 #66000
 b0 !O
 b0 'O
-0;O
-0<O
+0BO
+0CO
 #70000
-1`O
+1DO
 0&O
 0"O
 #75000
-0`O
+0DO
 1&O
 1"O
 #80000
-1`O
-0&O
-16O
 1DO
+0&O
+1(O
+1=O
 0"O
 b11 #O
 b11 %O
 #85000
-0`O
+0DO
 1&O
 1"O
 #86000
-1IO
+1BO
 b11 !O
 b11 'O
-1;O
-1JO
-1<O
+1-O
+1CO
+1.O
 #90000
-1`O
+1DO
 0&O
 0"O
 #95000
-0`O
+0DO
 1&O
 1"O
 #100000
-0aO
-1`O
+0EO
+1DO
 0&O
-1=O
-0DO
-1RO
+0(O
+1/O
+16O
 0"O
 0$O
 b1101 #O
 b1101 %O
 #105000
-0`O
+0DO
 1"O
 #110000
-1`O
+1DO
 0"O
 #115000
-0`O
+0DO
 1"O
 #120000
-1aO
-1`O
+1EO
+1DO
 0"O
 1$O
 #125000
-0`O
+0DO
 1&O
 1"O
 #126000
-1WO
-0IO
+1;O
+14O
 b1101 !O
 b1101 'O
-1BO
-1XO
-0JO
-1CO
-#130000
-1`O
-0&O
-0"O
-#135000
-0`O
-1&O
-1"O
-#140000
-1`O
-0&O
-0"O
-#145000
-0`O
-1&O
-1"O
-#150000
-1`O
-0&O
-0"O
-#155000
-0`O
-1&O
-1"O
-#160000
-1`O
-0&O
-1(O
-1/O
-06O
-1DO
-1YO
-0"O
-b1111110 #O
-b1111110 %O
-#165000
-0`O
-1&O
-1"O
-#166000
-1^O
-1IO
-0;O
-14O
-b1111110 !O
-b1111110 'O
-1-O
-1_O
-1JO
-0<O
+0-O
+1<O
 15O
-1.O
-#170000
-1`O
+0.O
+#130000
+1DO
 0&O
 0"O
