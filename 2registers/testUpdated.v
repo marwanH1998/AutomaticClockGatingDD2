@@ -10,6 +10,7 @@ module test2registers
 );
 
   wire __clockgate_output_gclk_;
+  wire __clockgate_output_gclk_1;
   wire _0_;
   wire _1_;
   input CLK;
@@ -17,7 +18,7 @@ module test2registers
   output D_OUT;
   input EN;
   input en2;
-wire __clockgate_output_gclk_2;
+
   sky130_fd_sc_hd__dlclkp
   __clockgate_cell__
   (
@@ -25,13 +26,16 @@ wire __clockgate_output_gclk_2;
     .GATE(EN),
     .CLK(CLK)
   );
+
+
   sky130_fd_sc_hd__dlclkp
-  __clockgate_cell__
+  __clockgate_cell__2
   (
-    .GCLK(__clockgate_output_gclk_2),
+    .GCLK(__clockgate_output_gclk_1),
     .GATE(en2),
     .CLK(CLK)
   );
+
 
   sky130_fd_sc_hd__dfxtp_1
   _4_
@@ -45,7 +49,7 @@ wire __clockgate_output_gclk_2;
   sky130_fd_sc_hd__dfxtp_1
   _5_
   (
-    .CLK(__clockgate_output_gclk_2),
+    .CLK(__clockgate_output_gclk_1),
     .D(D_IN),
     .Q(D_OUT)
   );

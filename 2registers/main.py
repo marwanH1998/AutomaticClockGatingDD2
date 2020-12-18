@@ -12,7 +12,6 @@ definition = desc.definitions[0]
 # get the portlist
 # loop over all items with type InstanceList
 # print the cell ports and their corresponding arguments
-
 newrtl= []
 inputlist = []
 outputlist= [] 
@@ -22,18 +21,36 @@ clkgateArgs = [
  vast.PortArg("CLK", vast.Identifier("CLK"))
 ]
 
+clkgateArgs2 = [
+               vast.PortArg("GCLK", vast.Identifier("__clockgate_output_gclk_1")),
+               vast.PortArg("GATE", vast.Identifier("en2")),
+               vast.PortArg("CLK", vast.Identifier("CLK"))
+               ]
+
 clkgate_cell = vast.Instance(
  "sky130_fd_sc_hd__dlclkp",
  "__clockgate_cell__",
  tuple(clkgateArgs),
  tuple()
 )
+
+clkgate_cell2 = vast.Instance(
+                             "sky130_fd_sc_hd__dlclkp",
+                             "__clockgate_cell__2",
+                             tuple(clkgateArgs2),
+                             tuple()
+                             )
 clockgate_output_gclk = vast.Wire('__clockgate_output_gclk_')
+clockgate_output_gclk1 = vast.Wire('__clockgate_output_gclk_1')
 
 
 k=0
+enable=[]
+flag = True
 insertedbefore=0;
 newrtl.append(clockgate_output_gclk)
+newrtl.append(clockgate_output_gclk1)
+
 for itemDeclaration in definition.items:
     item_type = type(itemDeclaration).__name__
     if item_type == "InstanceList":
@@ -41,18 +58,24 @@ for itemDeclaration in definition.items:
         if(instance.module == "sky130_fd_sc_hd__mux2_1"):
             if insertedbefore ==0:
                 newrtl.append(vast.InstanceList("sky130_fd_sc_hd__dlclkp", tuple(), tuple([clkgate_cell])))
+                newrtl.append(vast.InstanceList("sky130_fd_sc_hd__dlclkp", tuple(), tuple([clkgate_cell2])))
                 insertedbefore=1
             for hook in instance.portlist:
                 if hook.portname == "A1": #input
                     inputlist.append(hook.argname)
                 if hook.portname == "A0": #output
                     outputlist.append(hook.argname)
+                if hook.portname == "S":
+                    enable.append(hook.argname)
             continue
-        print("cell-name: ", instance.module, "instance-name: ", instance.name)
         for hook in instance.portlist:
             if hook.portname == "CLK":
-                print("change to clk input which is __clockgate_output_gclk_",hook.argname)
-                hook.argname=vast.Identifier('__clockgate_output_gclk_')
+                if flag==True:
+                    print("change to clk input which is __clockgate_output_gclk_",hook.argname)
+                    hook.argname=vast.Identifier('__clockgate_output_gclk_')
+                    flag=False
+                else:
+                    hook.argname=vast.Identifier('__clockgate_output_gclk_1')
             if hook.portname == "D":
                     hook.argname=inputlist[k]
             if hook.portname == "Q":
