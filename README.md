@@ -50,7 +50,7 @@ To run our program :  1- Clone the repository into your machine.<br />
                       
 We have implemented many testcases that represented our code. We have also added 2registers with 2enable lines.
 We have generated many testcases for testing different bits; [1bit, 2bits,4bit, 8bits,32bits]
-The technique of clock gating is used to reduce the clock power consumption for each of the test cells so we started to analyze our signals before and after the clock gating in the vcd files.
+The technique of clock gating is used to reduce the clock power consumption for each of the test cells so we started to analyze our signals before and after the clock gating in the vcd files after we generated the vcd file using the iverilog and the commands that we have taken in lab3.
                       
 Languages were are using: Verilog and Python
 
